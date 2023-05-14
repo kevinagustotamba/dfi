@@ -2,16 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("GUI Script | Only For Mobile ", "Synapse")
 local Tab     = Window:NewTab("Local Command")
 local Section = Tab:NewSection("Normal Command")
-local Section = Tab:NewSection("Speed")
-Section:NewTextBox("Character speed", "Type in a number to make the speed u want", function(txt)
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-Section:NewSlider("Character Jp", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.Jumppower = s
-end)
-Section:NewButton("Infinite yield", "alot of better", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+
 Section:NewKeybind("Toggle ui", "makes the gui invisible, press again to make it visible", Enum.KeyCode.RightAlt, function()
 	Library:ToggleUI()
 end)
@@ -32,7 +23,7 @@ Section:NewToggle("Auto Markio", "Auto Rainbow Star", function(state) if state t
 
 Section:NewToggle("Auto omb bOmb", "Auto Rainbow Star", function(state) if state then _G.on = true while _G.on do wait() local args = { [1] = "Omb Bomb" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
 
-local Tab     = Window:NewTab("A Raer Item ")
+local Tab     = Window:NewTab("A Rare Item Item ")
 local Section = Tab:NewSection("Lil Dude")
 
 Section:NewToggle("Auto Lil Dude", "Auto Rainbow Star", function(state) if state then _G.on = true while _G.on do wait() local args = { [1] = "Lil Dude" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
